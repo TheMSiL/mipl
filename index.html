@@ -35,9 +35,9 @@
 					<a href="https://www.nhc.no/en/frontpage/"><img src="./img/DnH.jpg"></a>
 				</div>
 				<ul class="header_nav">
-					<li class="header_nav-li"><a href="#mipl">Про МІПЛ</a></li>
-					<li class="header_nav-li"><a href="#about_company">Про Компанію</a></li>
-					<a class="header_nav_btn" href="#action">Як я можу допомогти ?</a>
+					<li class="header_nav-li"><a class="nav-link" href="#mipl">Про МІПЛ</a></li>
+					<li class="header_nav-li"><a class="nav-link" href="#about_company">Про Компанію</a></li>
+					<a class="header_nav_btn nav-link" href="#action">Як я можу допомогти ?</a>
 				</ul>
 				<div class="dropdown">
 					<a class="lang-menu" href="#">UA</a>
@@ -375,8 +375,16 @@
 		</section>
 		<section class="action" id="action">
 			<div class="container">
-				<h2 class="action_title">Надішліть листа до посольства Росії з вимогою негайно звільнити українських цивільних заручників</h2>
-				<p class="action_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus, est cum exercitationem soluta facilis. Alias hic placeat ab pariatur excepturi laboriosam nulla distinctio vel quo, fugiat possimus deserunt maxime perspiciatis, adipisci similique eligendi sed voluptate mollitia velit sit necessitatibus! Earum qui optio voluptates officiis cum in pariatur hic aperiam placeat, nobis dicta distinctio architecto quaerat est, suscipit delectus! Voluptate, itaque sapiente consectetur praesentium repudiandae veniam veritatis rerum culpa non nam asperiores, impedit nemo aliquam nihil? Beatae similique nisi amet perspiciatis! Ipsa cum dolorem ullam dicta at ab, illum sapiente laborum fugit a nobis delectus harum velit quia mollitia quae.</p>
+				<h2 class="action_title">Надішліть листа до посольства Росії з вимогою негайно звільнити українських цивільних
+					заручників</h2>
+				<p class="action_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. In necessitatibus, est cum
+					exercitationem soluta facilis. Alias hic placeat ab pariatur excepturi laboriosam nulla distinctio vel quo,
+					fugiat possimus deserunt maxime perspiciatis, adipisci similique eligendi sed voluptate mollitia velit sit
+					necessitatibus! Earum qui optio voluptates officiis cum in pariatur hic aperiam placeat, nobis dicta
+					distinctio architecto quaerat est, suscipit delectus! Voluptate, itaque sapiente consectetur praesentium
+					repudiandae veniam veritatis rerum culpa non nam asperiores, impedit nemo aliquam nihil? Beatae similique nisi
+					amet perspiciatis! Ipsa cum dolorem ullam dicta at ab, illum sapiente laborum fugit a nobis delectus harum
+					velit quia mollitia quae.</p>
 				<a class="action_btn" href="https://www.embassy-worldwide.com/country/russia/">Адреси посольств</a>
 			</div>
 		</section>
@@ -385,6 +393,8 @@
 		</div>
 	</div>
 	<script>
+
+		// change language //
 		const langMenu = document.querySelector(".lang-menu");
 		const langContent = document.getElementById("myDropdown");
 		const langLinks = langContent.querySelectorAll("a");
@@ -416,6 +426,11 @@
 			}
 		});
 
+		// change language //
+
+
+		// burger//
+
 		const burger = document.querySelector('.menu-switcher');
 		const headerNav = document.querySelector('.header_nav');
 		const body = document.body;
@@ -426,6 +441,11 @@
 				body.classList.add('menu_open');
 			}
 		});
+
+		// burger//
+
+
+		// modal card //
 
 		document.addEventListener('DOMContentLoaded', function () {
 			const cardContainers = document.querySelectorAll('.card_container');
@@ -443,14 +463,38 @@
 					overlay.style.display = 'none';
 					popups[index].style.display = 'none';
 				});
-				
+
 				overlay.addEventListener('click', function () {
 					overlay.style.display = 'none';
 					popups[index].style.display = 'none';
 				});
 			});
-		});
 
+			// modal card //
+
+			const menuLinks = document.querySelectorAll('.nav-link');
+			console.log(menuLinks);
+
+			menuLinks.forEach(link => {
+				link.addEventListener('click', event => {
+					event.preventDefault();
+					const targetId = link.getAttribute('href');
+					const targetSection = document.querySelector(targetId);
+
+					if (targetSection) {
+						const offset = targetSection.offsetTop;
+
+						window.scrollTo({
+							top: offset - 120,
+							behavior: 'smooth'
+						});
+						
+						body.classList.remove('menu_open');
+					}
+				});
+			});
+
+		});
 
 	</script>
 
