@@ -446,11 +446,18 @@ li {
 }
 
 .action_btn {
-	margin-top: 3rem;
+	margin: 3rem 0;
 	display: inline-block;
 }
 
 /* action */
+
+.pdf {
+	display: block;
+	width: 60%;
+	height: 500px;
+	margin: 0 auto;
+}
 
 @media (max-width: 1450px) {
 	.header_nav-li,
@@ -565,6 +572,10 @@ li {
 	.cards {
 		grid-template-columns: repeat(2, 300px);
 	}
+	.pdf {
+		width: 90%;
+		height: 450px;
+	}
 }
 
 @media (max-width: 800px) {
@@ -665,6 +676,11 @@ li {
 	.lang-content {
 		width: auto;
 		margin-top: 50px;
+	}
+
+	.pdf {
+		width: 95%;
+		height: 350px;
 	}
 }
 @media (max-width: 480px) {
