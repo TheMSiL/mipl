@@ -27,35 +27,35 @@
 
 <body>
 	<div class="wrapper">
+		<header class="header">
+			<div class="header_logos">
+				<a href="https://mipl.org.ua/"><img src="./img/MIHR.png" alt="logo"></a>
+				<a href="https://www.praguecivilsociety.org/"><img src="./img/PCSC.png"></a>
+				<a href="https://www.nhc.no/en/frontpage/"><img src="./img/DnH.jpg"></a>
+			</div>
+			<ul class="header_nav" id="mipl">
+				<li class="header_nav-li"><a class="nav-link" href="#mipl">Про МІПЛ</a></li>
+				<li class="header_nav-li"><a class="nav-link" href="#about_company">Про Компанію</a></li>
+				<a class="header_nav_btn nav-link" href="#action">Як я можу допомогти ?</a>
+			</ul>
+			<div class="dropdown">
+				<a class="lang-menu" href="#">UA</a>
+				<div id="myDropdown" class="lang-content">
+					<a href="#">EN</a>
+					<a href="#">NO</a>
+					<a href="#">IT</a>
+					<a href="#">FR</a>
+					<a href="#">DE</a>
+					<a href="#">CZ</a>
+					<a href="#">NL</a>
+				</div>
+			</div>
+			<div class="menu-switcher">
+				<span></span>
+			</div>
+		</header>
 		<div class="container">
-			<header class="header">
-				<div class="header_logos">
-					<a href="https://mipl.org.ua/"><img src="./img/MIHR.png" alt="logo"></a>
-					<a href="https://www.praguecivilsociety.org/"><img src="./img/PCSC.png"></a>
-					<a href="https://www.nhc.no/en/frontpage/"><img src="./img/DnH.jpg"></a>
-				</div>
-				<ul class="header_nav">
-					<li class="header_nav-li"><a class="nav-link" href="#mipl">Про МІПЛ</a></li>
-					<li class="header_nav-li"><a class="nav-link" href="#about_company">Про Компанію</a></li>
-					<a class="header_nav_btn nav-link" href="#action">Як я можу допомогти ?</a>
-				</ul>
-				<div class="dropdown">
-					<a class="lang-menu" href="#">UA</a>
-					<div id="myDropdown" class="lang-content">
-						<a href="#">EN</a>
-						<a href="#">NO</a>
-						<a href="#">IT</a>
-						<a href="#">FR</a>
-						<a href="#">DE</a>
-						<a href="#">CZ</a>
-						<a href="#">NL</a>
-					</div>
-				</div>
-				<div class="menu-switcher">
-					<span></span>
-				</div>
-			</header>
-			<section class="mipl" id="mipl">
+			<section class="mipl">
 				<div class="mipl_content">
 					<h1 class="mipl_content-title">
 						Медійна ініціатива за права людини
@@ -473,7 +473,6 @@
 			// modal card //
 
 			const menuLinks = document.querySelectorAll('.nav-link');
-			console.log(menuLinks);
 
 			menuLinks.forEach(link => {
 				link.addEventListener('click', event => {
@@ -488,7 +487,7 @@
 							top: offset - 120,
 							behavior: 'smooth'
 						});
-						
+
 						body.classList.remove('menu_open');
 					}
 				});
