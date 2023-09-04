@@ -186,7 +186,7 @@ li {
 
 .mipl {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: space-between;
 	margin-top: 3rem;
 }
@@ -200,6 +200,7 @@ li {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
+	margin-top: 100px;
 }
 
 .mipl_content-title,
@@ -441,10 +442,6 @@ li {
 	padding: 5rem 0;
 }
 
-.action_title {
-	text-align: center;
-}
-
 .action_btn {
 	margin: 3rem 0;
 	display: inline-block;
@@ -454,8 +451,8 @@ li {
 
 .pdf {
 	display: block;
-	width: 60%;
-	height: 500px;
+	width: 75%;
+	height: 100vh;
 	margin: 0 auto;
 }
 
@@ -560,6 +557,19 @@ li {
 	}
 }
 
+@media (max-width: 1140px) {
+	.mipl {
+		display: block;
+		justify-content: center;
+		margin: 9rem 0;
+		height: auto;
+	}
+
+	.mipl_content {
+		max-width: 100%;
+	}
+}
+
 @media (max-width: 900px) {
 	.header_logos {
 		gap: 15px;
@@ -574,7 +584,6 @@ li {
 	}
 	.pdf {
 		width: 90%;
-		height: 450px;
 	}
 }
 
@@ -589,21 +598,6 @@ li {
 
 	.header_logos img {
 		max-width: 200px;
-	}
-
-	.mipl {
-		display: block;
-		justify-content: center;
-		margin: 9rem 0;
-		height: auto;
-	}
-
-	.mipl_content {
-		max-width: 100%;
-	}
-
-	.mipl_img {
-		margin-top: 5rem;
 	}
 
 	.popup {
@@ -626,6 +620,11 @@ li {
 	.popup_content span {
 		font-size: 20px;
 	}
+	
+	.card_info {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 @media (max-width: 720px) {
@@ -637,6 +636,7 @@ li {
 	.popup {
 		width: 65%;
 	}
+
 }
 
 @media (max-width: 640px) {
@@ -680,7 +680,6 @@ li {
 
 	.pdf {
 		width: 95%;
-		height: 350px;
 	}
 }
 @media (max-width: 480px) {
