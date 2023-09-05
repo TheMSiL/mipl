@@ -100,7 +100,8 @@ li {
 }
 
 .header_nav_btn:hover,
-.mipl_btn:hover, .action_btn:hover {
+.mipl_btn:hover,
+.action_btn:hover {
 	color: #00b9a4;
 	background: transparent;
 	border: 1px solid #aaaaaa;
@@ -345,6 +346,10 @@ li {
 	width: 90%;
 }
 
+.card_info-tel {
+	display: none;
+}
+
 .card:hover .card_info {
 	opacity: 1;
 	transform: translateX(0);
@@ -462,7 +467,6 @@ li {
 	display: inline-block;
 	transition: 500ms ease;
 }
-
 
 /* action */
 
@@ -636,8 +640,24 @@ li {
 	}
 
 	.card_info {
-		opacity: 1;
-		transform: translateX(0);
+		display: none;
+	}
+
+	.card_container {
+		padding: 1rem;
+	}
+
+	.card_info-tel {
+		display: block;
+		text-align: center;
+		margin-top: 1rem;
+		cursor: pointer;
+		transition: 300ms;
+		font-weight: 700;
+	}
+
+	.card_info-tel:hover {
+		color: #00b9a4;
 	}
 }
 
