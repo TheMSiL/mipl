@@ -100,7 +100,7 @@ li {
 }
 
 .header_nav_btn:hover,
-.mipl_btn:hover {
+.mipl_btn:hover, .action_btn:hover {
 	color: #00b9a4;
 	background: transparent;
 	border: 1px solid #aaaaaa;
@@ -328,6 +328,7 @@ li {
 	padding: 1rem 1rem 2rem;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
 
 .card {
@@ -366,8 +367,15 @@ li {
 	opacity: 0;
 	transform: translateX(-350px);
 	bottom: 5%;
-	color: #00b9a4;
+	color: #fff;
 	padding: 1rem;
+	background: #00b9a4;
+	transition: 500ms ease;
+}
+
+.card_info:hover {
+	color: #00b9a4;
+	background: #fff;
 }
 /* cards */
 
@@ -419,10 +427,16 @@ li {
 }
 
 .popup_content span {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.popup_content span:first-of-type {
 	margin-bottom: 1rem;
 	display: block;
 	font-weight: 700;
-
 	font-size: 25px;
 }
 
@@ -446,7 +460,9 @@ li {
 .action_btn {
 	margin: 3rem 0;
 	display: inline-block;
+	transition: 500ms ease;
 }
+
 
 /* action */
 
@@ -618,7 +634,7 @@ li {
 	.popup_content span {
 		font-size: 20px;
 	}
-	
+
 	.card_info {
 		opacity: 1;
 		transform: translateX(0);
@@ -634,7 +650,6 @@ li {
 	.popup {
 		width: 65%;
 	}
-
 }
 
 @media (max-width: 640px) {
@@ -675,7 +690,6 @@ li {
 		width: auto;
 		margin-top: 50px;
 	}
-
 }
 @media (max-width: 480px) {
 	.header {
