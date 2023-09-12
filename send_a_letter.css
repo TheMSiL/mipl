@@ -122,7 +122,6 @@ li {
 }
 
 .header_nav_btn,
-.mipl_btn,
 .action_btn {
 	font-weight: 700;
 	font-size: 18px;
@@ -134,15 +133,7 @@ li {
 	border: 1px solid transparent;
 }
 
-.mipl_btn {
-	width: 150px;
-	display: block;
-	text-align: center;
-	margin: 3rem 0;
-}
-
 .header_nav_btn:hover,
-.mipl_btn:hover,
 .action_btn:hover {
 	color: #00b9a4;
 	background: transparent;
@@ -223,30 +214,6 @@ li {
 }
 
 /* header */
-
-/* mipl+about*/
-
-/* .mipl {
-	display: flex;
-	align-items: flex-start;
-	justify-content: space-between;
-	margin-top: 3rem;
-}
-
-.mipl_content {
-	max-width: 55vw;
-}
-
-.mipl_img {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	margin-top: 100px;
-} */
-
-
-/*mipl+about */
 
 /*Burger menu*/
 
@@ -368,7 +335,7 @@ li {
 
 .allCards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 2rem 1rem;
 	justify-content: center;
 }
@@ -532,7 +499,6 @@ li {
 }
 /* action */
 
-
 @media (max-width: 1220px) {
 	.header_top-title {
 		font-size: 30px;
@@ -549,17 +515,11 @@ li {
 		font-size: 26px;
 	}
 
-	.mipl {
-		margin-top: 8rem;
-	}
-
-	.mipl_content-text,
 	.about_content-text,
 	.action_text {
 		font-size: 16px;
 	}
 
-	.mipl_content-title,
 	.action_title,
 	.about_content-title {
 		font-size: 26px;
@@ -614,8 +574,16 @@ li {
 		display: block;
 	}
 
-	.cards {
-		grid-template-columns: repeat(2, 400px);
+	.aboutCards {
+		flex-direction: column;
+	}
+
+	.about {
+		max-width: 100%;
+	}
+
+	.allCards {
+		grid-template-columns: repeat(3, 1fr);
 	}
 
 	.lang-content {
@@ -628,16 +596,6 @@ li {
 @media (max-width: 1140px) {
 	.header_top-title {
 		font-size: 26px;
-	}
-	.mipl {
-		display: block;
-		justify-content: center;
-		margin: 9rem 0;
-		height: auto;
-	}
-
-	.mipl_content {
-		max-width: 100%;
 	}
 }
 
@@ -660,21 +618,15 @@ li {
 		font-size: 21px;
 	}
 
-	.mipl {
-		margin-top: 10rem;
-	}
-
-	.cards {
-		grid-template-columns: repeat(2, 300px);
+	.popup_content span {
+		font-size: 18px;
 	}
 }
 
 @media (max-width: 800px) {
-	.mipl_content-title,
 	.about_content-title,
 	.action_title {
 		font-size: 25px;
-		text-align: center;
 		line-height: 1.5;
 	}
 
@@ -782,15 +734,15 @@ li {
 	.popup {
 		width: 65%;
 	}
+
+	.allCards {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 @media (max-width: 640px) {
 	.header_top-title {
 		font-size: 18px;
-	}
-	.cards {
-		grid-template-columns: 350px;
-		margin-top: 6rem;
 	}
 }
 
@@ -798,6 +750,10 @@ li {
 	.header_logos img {
 		max-width: 120px;
 		height: 40px;
+	}
+	.cards,
+	.allCards {
+		grid-template-columns: 1fr;
 	}
 
 	.lang-menu {
@@ -825,6 +781,38 @@ li {
 		width: auto;
 		margin-top: 50px;
 	}
+
+	.header_top {
+		display: block;
+	}
+
+	.header_top-title {
+		font-size: 20px;
+		margin-bottom: 1rem;
+	}
+
+	.menu-switcher {
+		display: inline-block;
+	}
+	.lang-menu {
+		padding: 0 5px;
+	}
+
+	.header_bottom {
+		margin-top: 10px;
+	}
+
+	.partners {
+		justify-content: space-between;
+	}
+
+	.lang-content {
+		margin-top: 30px;
+	}
+
+	.dropdown {
+		margin-left: 30px;
+	}
 }
 @media (max-width: 480px) {
 	.header {
@@ -834,11 +822,6 @@ li {
 
 	.card_name {
 		font-size: 20px;
-	}
-
-	.cards {
-		grid-template-columns: 1fr;
-		margin-top: 6rem;
 	}
 
 	.header_logos {
